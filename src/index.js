@@ -1,9 +1,11 @@
-import '../css/common.css';
-import '../css/gallery.css';
-import countries from './countries.json';
-import itemsTemplate from '../templates/gallery-items.hbs';
+import '../src/styles.css';
+import menu from './menu.json';
+import menuTemplate from '../src/templates/menu-items.hbs';
 
-const galleryRef = document.querySelector('.js-gallery');
+const menuRef = document.querySelector('.js-menu');
 
-const markup = itemsTemplate(countries);
-galleryRef.insertAdjacentHTML('beforeend', markup);
+const menuMarkup = menuTemplate(menu);
+menuRef.insertAdjacentHTML('beforeend', menuMarkup);
+console.log(`menuMarkup`, menuMarkup)
+
+
