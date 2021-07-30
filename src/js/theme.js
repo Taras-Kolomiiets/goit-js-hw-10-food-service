@@ -13,25 +13,23 @@ onThemeLoad();
 function onThemeChange(e) {
   if (e.currentTarget.checked) {
     bodyRef.classList.add(Theme.DARK);
-    localStorage.setItem('Theme', JSON.stringify(Theme.DARK));
+    localStorage.setItem('Theme', Theme.DARK);
   } else {
     bodyRef.classList.remove(Theme.DARK);
     bodyRef.classList.add(Theme.LIGHT);
-    localStorage.setItem('Theme', JSON.stringify(Theme.LIGHT));
+    localStorage.setItem('Theme', Theme.LIGHT);
   }
 }
 
 function onThemeLoad () {
   let savedSettings = localStorage.getItem('Theme');
 
-  if (JSON.parse(savedSettings) === Theme.DARK) {
+  if (savedSettings === Theme.DARK) {
     themeSwitcher.checked = true;
     bodyRef.classList.add('dark-theme');
   }
-  if (
-    localStorage.getItem('Theme') === null ||
-    JSON.parse(savedSettings) === Theme.LIGHT
-  ) {
+  else
+  {
     themeSwitcher.checked = false;
     bodyRef.classList.remove('dark-theme');
     bodyRef.classList.add('light-theme');
