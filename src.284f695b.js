@@ -11,8 +11,8 @@ var e,t=arguments[3];!function(t,r){"object"==typeof exports&&"object"==typeof m
 },{"handlebars/dist/handlebars.runtime":"pAws"}],"cwth":[function(require,module,exports) {
 "use strict";require("../styles.css");var e=u(require("../menu.json")),t=u(require("../templates/menu-items.hbs"));function u(e){return e&&e.__esModule?e:{default:e}}const r=document.querySelector(".js-menu"),s=(0,t.default)(e.default);r.insertAdjacentHTML("beforeend",s);
 },{"../styles.css":"Tnu0","../menu.json":"mA8c","../templates/menu-items.hbs":"DO4D"}],"qwQt":[function(require,module,exports) {
-const e={LIGHT:"light-theme",DARK:"dark-theme"},t=document.querySelector("#theme-switch-toggle"),s=document.querySelector("body");function a(t){t.currentTarget.checked?(s.classList.add(e.DARK),localStorage.setItem("Theme",JSON.stringify(e.DARK))):(s.classList.remove(e.DARK),s.classList.add(e.LIGHT),localStorage.setItem("Theme",JSON.stringify(e.LIGHT)))}function c(){let a=localStorage.getItem("Theme");JSON.parse(a)===e.DARK&&(t.checked=!0,s.classList.add("dark-theme")),null!==localStorage.getItem("Theme")&&JSON.parse(a)!==e.LIGHT||(t.checked=!1,s.classList.remove("dark-theme"),s.classList.add("light-theme"))}t.addEventListener("change",a),c();
+const e={LIGHT:"light-theme",DARK:"dark-theme"},t=document.querySelector("#theme-switch-toggle"),c=document.querySelector("body");function s(t){t.currentTarget.checked?(c.classList.add(e.DARK),localStorage.setItem("Theme",e.DARK)):(c.classList.remove(e.DARK),c.classList.add(e.LIGHT),localStorage.setItem("Theme",e.LIGHT))}function a(){localStorage.getItem("Theme")===e.DARK?(t.checked=!0,c.classList.add("dark-theme")):(t.checked=!1,c.classList.remove("dark-theme"),c.classList.add("light-theme"))}t.addEventListener("change",s),a();
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./js/menu-template.js"),require("./js/theme.js");
 },{"./js/menu-template.js":"cwth","./js/theme.js":"qwQt"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-10-food-service/src.9aaacd7c.js.map
+//# sourceMappingURL=/goit-js-hw-10-food-service/src.284f695b.js.map
